@@ -1,0 +1,110 @@
+
+{% extends 'base.html' %}
+
+
+{%block content%}
+
+	<nav id="main">
+	    <div class="nav-wrapper">
+	      <a href="#" class="brand-logo center-align" style="font-family: 'PT Serif', serif;padding: 10px"><strong>Today's Headlines</strong></a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+       <li><a href="/blogcount">BlogCount <span class=" badge blue">{{c.blogcount}}</span></a></li>
+
+        	<li ><a href="">Profile</a></li>
+        	
+        	<li style="margin-right: 10px">{{request.session.user}}</li>
+        	<button class="btn btn-primary btn-sm">
+        		<li><a href="/logout">Logout</a></li>
+        	</button>
+        	
+      	  </ul>
+	    </div>
+  </nav>
+
+
+
+		<script>
+        	document.getElementById("base").style.display = "none";
+        </script>
+
+
+<div class="row center-align" style="float:none;display: inline-block;text-align: initial; padding-right:60px;margin: 50px ;">
+	
+	    <div class="col m3" >
+		      <div class="card z-depth-5">
+		        <div class="card-image">
+		          <img src="https://picsum.photos/200" >
+		          
+		        </div>
+		        <div class="card-content">
+		          <p>Get Everything</p>
+		        </div>
+		        <div class="card-action">
+		        	<a href="/index">
+		        	<button type="button" class="btn btn-primary">Let's Go</button>
+		          	</a>
+		        </div>
+		      </div>
+		</div>
+
+		<div class="col m3" >
+		      <div class="card z-depth-5">
+		        <div class="card-image">
+		          <img src="https://picsum.photos/200" >
+		          
+		        </div>
+		        <div class="card-content">
+		          <p>By Country name</p>
+		        </div>
+		        <div class="card-action">
+		          <a href="/country">
+		          <button type="button" class="btn btn-primary">Let's Go</button>
+		          </a>
+		        </div>
+		      </div>
+		</div>
+
+		<div class="col m3" >
+		      <div class="card z-depth-5">
+		        <div class="card-image">
+		          <img src="https://picsum.photos/200" >
+		          <span class="card-title"></span>
+		        </div>
+		        <div class="card-content">
+		          <p>Sports Section</p>
+		        </div>
+		        <div class="card-action">
+		          <a href="#">
+		          <button type="button" class="btn btn-primary">Let's Go</button>
+		      	  </a>
+		        </div>
+		      </div>
+		</div>
+
+
+		<div class="col m3" >
+		      <div class="card z-depth-5">
+		        <div class="card-image">
+		          <img src="https://picsum.photos/200" >
+		          
+		        </div>
+		        <div class="card-content">
+		          <p>Food Section</p>
+		        </div>
+		        <div class="card-action">
+		          <a href="#">
+		          <button type="button" class="btn btn-primary">Let's Go</button>
+		          </a>
+		        </div>
+		      </div>
+		</div>
+</div>
+
+
+
+
+
+	
+		
+{%endblock%}

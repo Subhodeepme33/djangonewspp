@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django App</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Roboto:wght@700&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet"> 
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!--Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<body>
+	
+	<!--Navbar -->
+	<nav id="base">
+	    <div class="nav-wrapper">
+	      <a href="#" class="brand-logo center-align" style="font-family: 'PT Serif', serif;padding: 10px"><strong>Today's Headlines</strong></a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        	<li ><a href="">Profile</a></li>
+        	<li><a href="">Person Logged</a></li>
+      	  </ul>
+	    </div>
+  </nav>
+        <script>
+        	document.getElementById("nav-mobile").style.display = "none";
+        </script>
+
+
+	<div class="wrapper">
+		{% block content %}
+		{% endblock %}
+
+	</div>
+
+
+	<!-- footer -->
+    
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">News Daily</h5>
+                <p class="grey-text text-lighten-4">The app provides latest news across various topics. It provides news about different topics from different countries. Explore more to find out</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Connect with me </h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Google +</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Subhodeep Bhowmick
+            
+            </div>
+          </div>
+        </footer>
+
+
+</body>
+</html>
